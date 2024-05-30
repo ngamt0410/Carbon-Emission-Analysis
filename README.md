@@ -52,5 +52,29 @@ Our dataset is compiled from publicly available data from **nature.com** and enc
 | 5  | Chile        | 
 
 # Explore Data Analysis
+## Which products contribute the most to carbon emissions?
+    select * from 
+    (
+      select product_name,
+    	  industry_groups.industry_group,
+    	  round(sum(carbon_footprint_pcf)/sum(weight_kg), 1) carbon_per_kg
+      from product_emissions 
+      left join industry_groups
+    	  on product_emissions.industry_group_id=industry_groups.id
+      group by product_name,
+    	industry_groups.industry_group
+    ) a
+    order by carbon_per_kg desc
+    limit 5
 
+| product_name                                                                                                                                                                                                                                                                                                                                                                            | industry_group                                   | carbon_per_kg | 
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | -----------------------------------------------: | ------------: | 
+| Electric Motor                                                                                                                                                                                                                                                                                                                                                                          | Capital Goods                                    | 781.4         | 
+| Small Rack Mount Switch                                                                                                                                                                                                                                                                                                                                                                 | Technology Hardware & Equipment                  | 736.5         | 
+| Alliance (HPLC)                                                                                                                                                                                                                                                                                                                                                                         | "Pharmaceuticals, Biotechnology & Life Sciences" | 681.6         | 
+| "ACQUITY® UPLC, ACQUITY® I-Class, ACQUITY® H-Class"                                                                                                                                                                                                                                                                                                                                     | "Pharmaceuticals, Biotechnology & Life Sciences" | 659.2         | 
+| "Bloomberg's standard-issue flat panel configuration (prior to 2010) was two 19\" panels mounted on a metal stand. In early 2010 Bloomberg engaged in the WRI Product Life Cycle Roadtest for this functional unit (cradle-to-grave). The functional unit has a lifespan of 5 years, so the emissions indicated [in this report] are the full emissions associated with that lifespan." | Media                                            | 646.4         | 
+
+* Top 5 Products most to carbon emissions per kg are Electric Motor, Small Rack Mount Switch, Alliance (HPLC), "ACQUITY® UPLC, ACQUITY® I-Class, ACQUITY® H-Class"
+* Top Industry produce highest carbon emissions per kg are Capital Goods, Technology Hardware & Equipment, **Pharmaceuticals, Biotechnology & Life**
 
