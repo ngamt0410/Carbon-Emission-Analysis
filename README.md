@@ -52,7 +52,37 @@ Our dataset is compiled from publicly available data from **nature.com** and enc
 | 5  | Chile        | 
 
 # Explore Data Analysis
-## Which products contribute the most to carbon emissions?
+## Which industry contribute the most to carbon emissions?
+    
+    select * from 
+    (
+      select 
+    	  industry_groups.industry_group,
+    	  sum(carbon_footprint_pcf) carbon_footprint_pcf
+      from product_emissions 
+      left join industry_groups
+    	  on product_emissions.industry_group_id=industry_groups.id
+      group by
+    	industry_groups.industry_group
+    ) a
+    order by carbon_footprint_pcf desc
+
+| industry_group                     | carbon_footprint_pcf | 
+| ---------------------------------: | -------------------: | 
+| Electrical Equipment and Machinery | 9801558              | 
+| Automobiles & Components           | 2582264              | 
+| Materials                          | 577595               | 
+| Technology Hardware & Equipment    | 363776               | 
+| Capital Goods                      | 258712               | 
+
+
+
+![image](https://github.com/ngamt0410/Carbon-Emission-Analysis/assets/169979658/56399779-baf9-454a-9131-e24f582521b4)
+
+
+
+
+## Which products produce highest carbon emissions per kg?
     select * from 
     (
       select product_name,
