@@ -1,6 +1,10 @@
 # Carbon-Emission-Analysis
 This report aims to analyze carbon emissions to examine the carbon footprint across various industries. We aim to identify sectors with the highest levels of emissions by analyzing them across countries and years, as well as to uncover trends.
 
+![image](https://github.com/ngamt0410/Carbon-Emission-Analysis/assets/169979658/2966e302-2ef7-4768-810d-ac0179dad817)
+
+
+
 
 # Data Source: Where Our Data Comes From
 
