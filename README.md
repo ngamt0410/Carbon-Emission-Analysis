@@ -52,6 +52,20 @@ Our dataset is compiled from publicly available data from **nature.com** and enc
 | 5  | Chile        | 
 
 # Explore Data Analysis
+## What is the trend of carbon footprints (PCFs) over the years?
+
+  select 
+	  year,
+	  sum(carbon_footprint_pcf) carbon_footprint_pcf
+  from product_emissions 
+  group by
+	year
+
+
+![image](https://github.com/ngamt0410/Carbon-Emission-Analysis/assets/169979658/8697b8e2-065d-4ee8-9f62-fc9f482f6d29)
+
+* In 2015, there was an abnormal increase in carbon emissions.
+
 ## Which industry contribute the most to carbon emissions?
     
     select * from 
