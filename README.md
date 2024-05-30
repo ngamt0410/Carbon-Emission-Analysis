@@ -18,5 +18,34 @@ Our dataset is compiled from publicly available data from **nature.com** and enc
 | 10261-1-2017 | 14         | 16         | 25                | 2017 | Multifunction Printers                                          | 110       | 1488                 | 30.65                      | 5.51                         | 63.84                        | 
 | 10261-2-2017 | 14         | 16         | 25                | 2017 | Multifunction Printers                                          | 110       | 1818                 | 25.08                      | 4.51                         | 70.41                        | 
 
+## industry_groups
+| id | industry_group                                                         | 
+| -: | ---------------------------------------------------------------------: | 
+| 1  | "Consumer Durables, Household and Personal Products"                   | 
+| 2  | "Food, Beverage & Tobacco"                                             | 
+| 3  | "Forest and Paper Products - Forestry, Timber, Pulp and Paper, Rubber" | 
+| 4  | "Mining - Iron, Aluminum, Other Metals"                                | 
+| 5  | "Pharmaceuticals, Biotechnology & Life Sciences"                       | 
+
+## companies
+
+| id | company_name                  | 
+| -: | ----------------------------: | 
+| 1  | "Autodesk, Inc."              | 
+| 2  | "Casio Computer Co., Ltd."    | 
+| 3  | "Cisco Systems, Inc."         | 
+| 4  | "CNX Coal Resources, LP"      | 
+| 5  | "Coca-Cola Enterprises, Inc." | 
+
+## countries
+| id | country_name | 
+| -: | -----------: | 
+| 1  | Australia    | 
+| 2  | Belgium      | 
+| 3  | Brazil       | 
+| 4  | Canada       | 
+| 5  | Chile        | 
+
+# Explore Data Analysis
 
 
